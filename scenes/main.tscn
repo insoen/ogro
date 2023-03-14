@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://cuoqbj73jumxs"]
+
+[ext_resource type="Texture2D" uid="uid://cxekkxl5blt0i" path="res://sprites/bg/Sky.jpg" id="1_vlbgk"]
+[ext_resource type="Texture2D" uid="uid://fjj6xp2v2c6j" path="res://sprites/bg/BG_Decor.png" id="2_64jme"]
+[ext_resource type="Texture2D" uid="uid://7g5o80fuomtq" path="res://sprites/bg/Middle_Decor.png" id="3_o1svs"]
+[ext_resource type="Texture2D" uid="uid://q023h3fwut5s" path="res://sprites/bg/Foreground.png" id="4_kkpqv"]
+[ext_resource type="Texture2D" uid="uid://cj5dw3gdiu6ix" path="res://sprites/bg/Ground.png" id="5_sqh4h"]
+[ext_resource type="Texture2D" uid="uid://cecupusarddqy" path="res://sprites/tiles/Ground_02.png" id="6_w32ui"]
+[ext_resource type="Texture2D" uid="uid://dkeigqdvkmlus" path="res://sprites/tiles/Decor_Brick.png" id="7_r5nyx"]
+[ext_resource type="PackedScene" uid="uid://dlnqaj1w6cwv0" path="res://scenes/ogro.tscn" id="8_3n63b"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7pe2e"]
+texture = ExtResource("6_w32ui")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1soxn"]
+texture = ExtResource("7_r5nyx")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pohad"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_7pe2e")
+sources/1 = SubResource("TileSetAtlasSource_1soxn")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvwpx"]
+size = Vector2(2689, 87)
+
+[node name="Main" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_vlbgk")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("2_64jme")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("3_o1svs")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("4_kkpqv")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("5_sqh4h")
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_pohad")
+format = 2
+layer_0/tile_data = PackedInt32Array(327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 196608, 1, 0, 196609, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1341.5, 688.5)
+shape = SubResource("RectangleShape2D_kvwpx")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_3n63b")]
+position = Vector2(-27, 69)
