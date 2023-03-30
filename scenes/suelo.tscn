@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxlarsx1xj4ll"]
+
+[ext_resource type="Script" path="res://scenes/Suelo.gd" id="2_403sh"]
+[ext_resource type="Texture2D" uid="uid://diurquf5kvvcs" path="res://tiles/suelo.png" id="2_c5x12"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7tr4o"]
+load_path = "res://.godot/imported/Ground.png-29b0f7d41d0e67c0676c48410a15eada.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qt5de"]
+size = Vector2(20, 290)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4k6h"]
+size = Vector2(20, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrnhu"]
+size = Vector2(2046.5, 122)
+
+[node name="Suelo" type="Sprite2D"]
+z_index = 1
+position = Vector2(958, 569)
+scale = Vector2(1, 0.25)
+texture = SubResource("CompressedTexture2D_7tr4o")
+script = ExtResource("2_403sh")
+
+[node name="area_fin" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_fin"]
+z_index = 1
+position = Vector2(950, 340)
+shape = SubResource("RectangleShape2D_qt5de")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="area_inicio" type="Area2D" parent="Node"]
+position = Vector2(1206, 673)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/area_inicio"]
+position = Vector2(-1216, 1)
+shape = SubResource("RectangleShape2D_d4k6h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(55.75, 488)
+shape = SubResource("RectangleShape2D_vrnhu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-481, 552)
+scale = Vector2(1, 2.0625)
+texture = ExtResource("2_c5x12")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(476, 552)
+scale = Vector2(1, 2.0625)
+texture = ExtResource("2_c5x12")
+
+[connection signal="area_entered" from="area_fin" to="." method="_on_area_fin_area_entered"]

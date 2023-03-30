@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwjud3vtxtoin"]
+
+[ext_resource type="Script" path="res://scenes/fart.gd" id="1_vg25u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kx8n1"]
+radius = 10.5119
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ettrm"]
+load_path = "res://.godot/imported/gas.png-082276a02719c243d366b5aa060732b1.ctex"
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_vg25u")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(19, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(19, 15)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_kx8n1")
+debug_color = Color(0.913725, 0.105882, 0.662745, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(18, 14)
+scale = Vector2(2.3, 2.3)
+texture = SubResource("CompressedTexture2D_ettrm")
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
