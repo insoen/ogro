@@ -1,5 +1,7 @@
-extends Sprite2D
-@export var bg_velocity = 2
+extends Node2D
+var bg_velocity = 4
+@onready
+var main = get_node("/root/Master")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,8 +10,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x = position.x - bg_velocity
+	if main.in_game:
+		position.x = position.x - bg_velocity
 
 
-func _on_area_fin_area_entered(area):
-	self.position.x = self.position.x + 950 * 2
+
+	
+

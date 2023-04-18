@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ddh5cnlyyaqfl"]
+
+[node name="Obstaculo1" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(462, 99)
+points = PackedVector2Array(-465, 431, 203, 426, 813, 428)

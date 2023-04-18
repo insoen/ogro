@@ -1,31 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuoqbj73jumxs"]
+[gd_scene load_steps=9 format=3 uid="uid://cuoqbj73jumxs"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_xuw78"]
 [ext_resource type="PackedScene" uid="uid://cxlarsx1xj4ll" path="res://scenes/suelo.tscn" id="3_8cn15"]
-[ext_resource type="PackedScene" uid="uid://c4cmkwx4ulu6l" path="res://scenes/background.tscn" id="5_7vp7r"]
-[ext_resource type="PackedScene" uid="uid://dlnqaj1w6cwv0" path="res://scenes/ogro.tscn" id="8_3n63b"]
+[ext_resource type="PackedScene" uid="uid://dp16uvtw6arpm" path="res://scenes/enemy.tscn" id="7_8x46i"]
+[ext_resource type="PackedScene" uid="uid://cixa6g7t7kn0m" path="res://scenes/ogro.tscn" id="8_3n63b"]
+[ext_resource type="PackedScene" uid="uid://bilsr8xpdgum3" path="res://scenes/enemy2.tscn" id="8_l8y3e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eihh5"]
+size = Vector2(36, 742)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2ai71"]
+polygon = PackedVector2Array(-378, 248, 952, 250, 945, 349, -379, 346)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l7tl"]
+size = Vector2(1291, 20)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_xuw78")
 
 [node name="Ogro" parent="." instance=ExtResource("8_3n63b")]
-z_index = 1
-position = Vector2(400, -100)
+position = Vector2(400, 630)
 
-[node name="Camera2D2" type="Camera2D" parent="Ogro"]
-position = Vector2(-467, 81)
-anchor_mode = 0
-limit_left = 0
-limit_top = 0
-limit_bottom = 700
-position_smoothing_enabled = true
-
-[node name="bg_sprite2" parent="." instance=ExtResource("5_7vp7r")]
-position = Vector2(5758, 179)
-
-[node name="bg_sprite" parent="." instance=ExtResource("5_7vp7r")]
+[node name="Timer" type="Timer" parent="."]
 
 [node name="Suelo" parent="." instance=ExtResource("3_8cn15")]
-z_index = 2
 
 [node name="Suelo2" parent="." instance=ExtResource("3_8cn15")]
-z_index = 2
-position = Vector2(2873, 569)
+position = Vector2(1915, 0)
+
+[node name="Enemy" parent="." instance=ExtResource("7_8x46i")]
+position = Vector2(257, -1117)
+
+[node name="Enemy2" parent="." instance=ExtResource("8_l8y3e")]
+position = Vector2(457, -1112)
+
+[node name="Enemy3" parent="." instance=ExtResource("7_8x46i")]
+position = Vector2(806, -1115)
+
+[node name="Enemy4" parent="." instance=ExtResource("8_l8y3e")]
+position = Vector2(622, -1112)
+
+[node name="area_inicio" type="Area2D" parent="."]
+position = Vector2(1082, 662)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_inicio"]
+position = Vector2(-1282, -337)
+shape = SubResource("RectangleShape2D_eihh5")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(365, 438)
+occluder = SubResource("OccluderPolygon2D_2ai71")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(636, -87)
+shape = SubResource("RectangleShape2D_8l7tl")
+
+[connection signal="area_entered" from="area_inicio" to="." method="_on_area_inicio_area_entered"]

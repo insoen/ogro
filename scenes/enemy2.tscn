@@ -1,0 +1,147 @@
+[gd_scene load_steps=32 format=3 uid="uid://bilsr8xpdgum3"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_k5cvl"]
+[ext_resource type="Texture2D" uid="uid://cghc64hqr03sr" path="res://tiles/Run Slashing/0_Orc_Run Slashing_000.png" id="2_63fqh"]
+[ext_resource type="Texture2D" uid="uid://cwa1vkdoh86lf" path="res://tiles/Run Slashing/0_Orc_Run Slashing_001.png" id="3_6g1ot"]
+[ext_resource type="Texture2D" uid="uid://bw2enjmmmhii6" path="res://tiles/Run Slashing/0_Orc_Run Slashing_002.png" id="4_1ekv0"]
+[ext_resource type="Texture2D" uid="uid://dthwwwn4kh0ip" path="res://tiles/Run Slashing/0_Orc_Run Slashing_003.png" id="5_oa7wx"]
+[ext_resource type="Texture2D" uid="uid://dabwr7wf1a586" path="res://tiles/Run Slashing/0_Orc_Run Slashing_004.png" id="6_17pe2"]
+[ext_resource type="Texture2D" uid="uid://cn1xcwxeue1ue" path="res://tiles/Run Slashing/0_Orc_Run Slashing_005.png" id="7_c7n37"]
+[ext_resource type="Texture2D" uid="uid://blfh6qqkoba4o" path="res://tiles/Run Slashing/0_Orc_Run Slashing_006.png" id="8_cm8od"]
+[ext_resource type="Texture2D" uid="uid://bkjhq8hen3ts0" path="res://tiles/Run Slashing/0_Orc_Run Slashing_007.png" id="9_2577l"]
+[ext_resource type="Texture2D" uid="uid://bx7cqqmmr016g" path="res://tiles/Run Slashing/0_Orc_Run Slashing_008.png" id="10_eb4k3"]
+[ext_resource type="Texture2D" uid="uid://bogfmrasg523f" path="res://tiles/Run Slashing/0_Orc_Run Slashing_009.png" id="11_2rfmq"]
+[ext_resource type="Texture2D" uid="uid://b68p22i0qtpf2" path="res://tiles/Run Slashing/0_Orc_Run Slashing_010.png" id="12_ri26j"]
+[ext_resource type="Texture2D" uid="uid://crgqblaf2gceu" path="res://tiles/Run Slashing/0_Orc_Run Slashing_011.png" id="13_8lahd"]
+[ext_resource type="PackedScene" uid="uid://47ipjp6uithv" path="res://scenes/explosion_enemy.tscn" id="14_18ux5"]
+[ext_resource type="Texture2D" uid="uid://dplapsk286gov" path="res://tiles/Dying_orc/0_Orc_Dying_000.png" id="14_b3lr1"]
+[ext_resource type="Texture2D" uid="uid://ctr8t54icklax" path="res://tiles/Dying_orc/0_Orc_Dying_001.png" id="15_fybgi"]
+[ext_resource type="Texture2D" uid="uid://dnruyijs78met" path="res://tiles/Dying_orc/0_Orc_Dying_002.png" id="16_cwmkr"]
+[ext_resource type="Texture2D" uid="uid://cj0ttx7orwjda" path="res://tiles/Dying_orc/0_Orc_Dying_003.png" id="17_u5bu6"]
+[ext_resource type="Texture2D" uid="uid://bdeqihj0pp0k6" path="res://tiles/Dying_orc/0_Orc_Dying_004.png" id="18_wbr13"]
+[ext_resource type="Texture2D" uid="uid://cm00d6dosmb2v" path="res://tiles/Dying_orc/0_Orc_Dying_005.png" id="19_hupwx"]
+[ext_resource type="Texture2D" uid="uid://kqg3ksdaaqts" path="res://tiles/Dying_orc/0_Orc_Dying_006.png" id="20_5qd7h"]
+[ext_resource type="Texture2D" uid="uid://31cpd44pjcyl" path="res://tiles/Dying_orc/0_Orc_Dying_007.png" id="21_xa406"]
+[ext_resource type="Texture2D" uid="uid://cbwkp13ke7w7b" path="res://tiles/Dying_orc/0_Orc_Dying_008.png" id="22_k4p4r"]
+[ext_resource type="Texture2D" uid="uid://sp3tlj81aa06" path="res://tiles/Dying_orc/0_Orc_Dying_009.png" id="23_rf4qb"]
+[ext_resource type="Texture2D" uid="uid://bjhcq0ap2hn7e" path="res://tiles/Dying_orc/0_Orc_Dying_010.png" id="24_dbw3d"]
+[ext_resource type="Texture2D" uid="uid://12yc3laalfhk" path="res://tiles/Dying_orc/0_Orc_Dying_011.png" id="25_ti73q"]
+[ext_resource type="Texture2D" uid="uid://b3ckpinshjvof" path="res://tiles/Dying_orc/0_Orc_Dying_012.png" id="26_u5l5k"]
+[ext_resource type="Texture2D" uid="uid://w5w4aegfxwo5" path="res://tiles/Dying_orc/0_Orc_Dying_013.png" id="27_r4hc0"]
+[ext_resource type="Texture2D" uid="uid://dew8q3e2oeol5" path="res://tiles/Dying_orc/0_Orc_Dying_014.png" id="28_aryd2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52wgl"]
+size = Vector2(119, 107)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d82fi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_63fqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6g1ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1ekv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oa7wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_17pe2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c7n37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cm8od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2577l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eb4k3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2rfmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ri26j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8lahd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_b3lr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fybgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cwmkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_u5bu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wbr13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hupwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5qd7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xa406")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_k4p4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rf4qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dbw3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ti73q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_u5l5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_r4hc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_aryd2")
+}],
+"loop": false,
+"name": &"die",
+"speed": 14.0
+}]
+
+[node name="Enemy2" type="Area2D" groups=["enemies"]]
+script = ExtResource("1_k5cvl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(425.5, 529.5)
+shape = SubResource("RectangleShape2D_52wgl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(446, 513)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_d82fi")
+animation = &"die"
+frame_progress = 0.738186
+flip_h = true
+
+[node name="explosion_enemy" parent="." instance=ExtResource("14_18ux5")]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

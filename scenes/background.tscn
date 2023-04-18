@@ -8,7 +8,7 @@ load_path = "res://.godot/imported/background.png-32c67d327085dc6a588b61a97c0dc7
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdlva"]
 size = Vector2(20, 334)
 
-[node name="bg_sprite" type="Sprite2D"]
+[node name="background" type="Sprite2D"]
 position = Vector2(1918, 179)
 scale = Vector2(2, 1)
 texture = SubResource("CompressedTexture2D_pah2c")

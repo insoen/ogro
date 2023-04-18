@@ -1,7 +1,21 @@
-[gd_scene load_steps=41 format=3 uid="uid://dlnqaj1w6cwv0"]
+[gd_scene load_steps=55 format=3 uid="uid://cixa6g7t7kn0m"]
 
 [ext_resource type="Script" path="res://scenes/ogro_endless.gd" id="1_i5yba"]
-[ext_resource type="Texture2D" uid="uid://cnmjlqey4tiuc" path="res://tiles/particle1.png" id="2_iy3fq"]
+[ext_resource type="Texture2D" uid="uid://dm6711uxesqa2" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_000.png" id="2_dakmd"]
+[ext_resource type="Texture2D" uid="uid://c5dyldni8k2kw" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_001.png" id="3_wqt84"]
+[ext_resource type="Texture2D" uid="uid://baa1bvg81jkwj" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_002.png" id="4_yx453"]
+[ext_resource type="Texture2D" uid="uid://fdrrl2qv8ilg" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_003.png" id="5_uea5p"]
+[ext_resource type="Texture2D" uid="uid://duvqcn6j8g3ai" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_004.png" id="6_238e2"]
+[ext_resource type="Texture2D" uid="uid://ctjw4n2xi0dyc" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_005.png" id="7_1wtdo"]
+[ext_resource type="Texture2D" uid="uid://cvxehr2kus8ds" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_006.png" id="8_qq7gp"]
+[ext_resource type="Texture2D" uid="uid://euluyksmwth7" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_007.png" id="9_pb1m2"]
+[ext_resource type="Texture2D" uid="uid://bvosc7bfftddr" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_008.png" id="10_jpvph"]
+[ext_resource type="Texture2D" uid="uid://cs45uo8uvd582" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_009.png" id="11_bqheq"]
+[ext_resource type="Texture2D" uid="uid://tk8el6dxjibh" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_010.png" id="12_xujdy"]
+[ext_resource type="Texture2D" uid="uid://ctyj8cw0q2kf" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_011.png" id="13_kq0jd"]
+[ext_resource type="Texture2D" uid="uid://ckxhr4cqw0v34" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_012.png" id="14_j02bp"]
+[ext_resource type="Texture2D" uid="uid://bh5pp61qb6vo6" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_013.png" id="15_bjqnc"]
+[ext_resource type="Texture2D" uid="uid://bvjor8fjwsvl3" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_014.png" id="16_81d5x"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4a5wa"]
 load_path = "res://.godot/imported/0_Ogre_Idle_000.png-b579f82402e9f4525e995623a909c299.ctex"
@@ -113,6 +127,56 @@ load_path = "res://.godot/imported/0_Ogre_Jump Start_005.png-4dd2963718ab8acb74f
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pvrao"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dakmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wqt84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yx453")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uea5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_238e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1wtdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qq7gp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pb1m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jpvph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bqheq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xujdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kq0jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_j02bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bjqnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_81d5x")
+}],
+"loop": false,
+"name": &"die",
+"speed": 14.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("CompressedTexture2D_4a5wa")
@@ -241,40 +305,27 @@ animations = [{
 size = Vector2(47, 91)
 
 [node name="Ogro" type="CharacterBody2D"]
-position = Vector2(-1, -8)
 script = ExtResource("1_i5yba")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
 texture_filter = 1
-position = Vector2(-23, 384)
+position = Vector2(-85, -101)
 scale = Vector2(0.197, 0.2)
 sprite_frames = SubResource("SpriteFrames_pvrao")
-animation = &"up"
+animation = &"die"
 autoplay = "idle"
-frame_progress = 0.818995
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(64, 485)
 shape = SubResource("RectangleShape2D_vhyxl")
 
-[node name="fart" type="CPUParticles2D" parent="."]
-texture_filter = 1
-position = Vector2(65, 522)
-emitting = false
-amount = 15
-lifetime = 0.5
-explosiveness = 0.6
-randomness = 0.6
-lifetime_randomness = 0.5
-texture = ExtResource("2_iy3fq")
-emission_shape = 1
-emission_sphere_radius = 25.0
-direction = Vector2(0, 0)
-spread = 53.51
-gravity = Vector2(0, 480)
-damping_min = 2.0
-damping_max = 10.0
-scale_amount_min = 0.2
-scale_amount_max = 0.5
+[node name="AreaOgro" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaOgro"]
+shape = SubResource("RectangleShape2D_vhyxl")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1, 26)
+
+[connection signal="area_shape_entered" from="AreaOgro" to="." method="_on_area_2d_area_shape_entered"]

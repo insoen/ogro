@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwjud3vtxtoin"]
+[gd_scene load_steps=6 format=3 uid="uid://dwjud3vtxtoin"]
 
 [ext_resource type="Script" path="res://scenes/fart.gd" id="1_vg25u"]
+[ext_resource type="Texture2D" uid="uid://cnmjlqey4tiuc" path="res://tiles/particle1.png" id="2_5e1lp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kx8n1"]
 radius = 10.5119
@@ -8,7 +9,18 @@ radius = 10.5119
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ettrm"]
 load_path = "res://.godot/imported/gas.png-082276a02719c243d366b5aa060732b1.ctex"
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gaen2"]
+emission_shape = 1
+emission_sphere_radius = 12.11
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
+[node name="Fart2D" type="Area2D"]
+z_index = 5
+position = Vector2(180, 120)
 script = ExtResource("1_vg25u")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
@@ -25,5 +37,21 @@ debug_color = Color(0.913725, 0.105882, 0.662745, 0.419608)
 position = Vector2(18, 14)
 scale = Vector2(2.3, 2.3)
 texture = SubResource("CompressedTexture2D_ettrm")
+
+[node name="fart" type="GPUParticles2D" parent="." groups=["particles"]]
+z_index = -1
+texture_filter = 1
+position = Vector2(20, 22)
+scale = Vector2(0.75, 0.739)
+skew = -1.2514
+emitting = false
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_gaen2")
+texture = ExtResource("2_5e1lp")
+lifetime = 0.5
+one_shot = true
+speed_scale = 0.8
+explosiveness = 0.13
+randomness = 0.61
 
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://47ipjp6uithv"]
+
+[ext_resource type="Texture2D" uid="uid://cnmjlqey4tiuc" path="res://tiles/particle1.png" id="1_m0vnq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81mpw"]
+
+[node name="explosion_enemy" type="CPUParticles2D"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_81mpw")
+position = Vector2(441, 500)
+scale = Vector2(0.005, 0.005)
+emitting = false
+amount = 60
+lifetime = 0.3
+one_shot = true
+explosiveness = 0.5
+texture = ExtResource("1_m0vnq")
+emission_shape = 1
+emission_sphere_radius = 0.3
+spread = 25.54
+gravity = Vector2(0, 0)
+initial_velocity_min = 71.43
+initial_velocity_max = 162.34
+scale_amount_max = 3.0
+color = Color(1, 1, 1, 0.14902)
