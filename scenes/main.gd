@@ -5,7 +5,7 @@ var main = get_node("/root/Master")
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	init_timer()
+	pass
 
 
 		
@@ -30,3 +30,10 @@ func call_enemy():
 func _on_area_inicio_area_entered(area):
 	if(area.name == 'fin_suelo'):
 		area.get_parent().get_parent().position.x = 1700
+
+
+func _on_play_button_pressed():
+	init_timer()
+	$StartSound.playing = true
+	$PlayButton.visible = false
+

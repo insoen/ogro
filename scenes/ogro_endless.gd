@@ -26,6 +26,7 @@ func _physics_process(delta):
 			fart_ins.position.x = $Marker2D.position.x
 			fart_ins.position.y = $Marker2D.position.y
 			add_child(fart_ins)
+			$JumpSound.playing = true
 			fart_ins.get_node("fart").emitting = true
 		
 		#Si está en el suelo animación de andar

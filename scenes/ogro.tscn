@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://cixa6g7t7kn0m"]
+[gd_scene load_steps=56 format=3 uid="uid://cixa6g7t7kn0m"]
 
 [ext_resource type="Script" path="res://scenes/ogro_endless.gd" id="1_i5yba"]
 [ext_resource type="Texture2D" uid="uid://dm6711uxesqa2" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_000.png" id="2_dakmd"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ckxhr4cqw0v34" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_012.png" id="14_j02bp"]
 [ext_resource type="Texture2D" uid="uid://bh5pp61qb6vo6" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_013.png" id="15_bjqnc"]
 [ext_resource type="Texture2D" uid="uid://bvjor8fjwsvl3" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_014.png" id="16_81d5x"]
+[ext_resource type="AudioStream" uid="uid://d30j6q8fygvfn" path="res://sounds/jump.mp3" id="17_kg57u"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4a5wa"]
 load_path = "res://.godot/imported/0_Ogre_Idle_000.png-b579f82402e9f4525e995623a909c299.ctex"
@@ -327,5 +328,8 @@ shape = SubResource("RectangleShape2D_vhyxl")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1, 26)
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_kg57u")
 
 [connection signal="area_shape_entered" from="AreaOgro" to="." method="_on_area_2d_area_shape_entered"]
