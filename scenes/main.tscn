@@ -1,31 +1,24 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuoqbj73jumxs"]
+[gd_scene load_steps=13 format=3 uid="uid://cuoqbj73jumxs"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_xuw78"]
-[ext_resource type="Texture2D" uid="uid://vyndo7gksr3f" path="res://gui/play_normal.png" id="2_gefhj"]
 [ext_resource type="PackedScene" uid="uid://cxlarsx1xj4ll" path="res://scenes/suelo.tscn" id="3_8cn15"]
-[ext_resource type="Texture2D" uid="uid://jvb0m1ot4t0v" path="res://gui/play_pressed.png" id="3_44wtp"]
 [ext_resource type="PackedScene" uid="uid://dp16uvtw6arpm" path="res://scenes/enemy.tscn" id="7_8x46i"]
+[ext_resource type="PackedScene" uid="uid://dkq21lbw5ndo1" path="res://scenes/gui.tscn" id="7_w1owe"]
 [ext_resource type="PackedScene" uid="uid://cixa6g7t7kn0m" path="res://scenes/ogro.tscn" id="8_3n63b"]
 [ext_resource type="AudioStream" uid="uid://d30j6q8fygvfn" path="res://sounds/jump.mp3" id="8_l6f0u"]
 [ext_resource type="PackedScene" uid="uid://bilsr8xpdgum3" path="res://scenes/enemy2.tscn" id="8_l8y3e"]
+[ext_resource type="PackedScene" uid="uid://blqwwwwyxp4di" path="res://scenes/obstaculos/obstaculo1tscn.tscn" id="8_p0254"]
+[ext_resource type="PackedScene" uid="uid://ddh5cnlyyaqfl" path="res://scenes/obstaculos/obstaculo_base.tscn" id="9_btn6k"]
+[ext_resource type="AudioStream" uid="uid://cu8k66xktqeie" path="res://sounds/416512__carloscarty__medieval-flute-loop-124-bpm.wav" id="10_nge36"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eihh5"]
 size = Vector2(36, 742)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2ai71"]
-polygon = PackedVector2Array(-378, 248, 952, 250, 945, 349, -379, 346)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8l7tl"]
 size = Vector2(1291, 20)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_xuw78")
-
-[node name="PlayButton" type="TouchScreenButton" parent="."]
-z_index = 1
-position = Vector2(549, 324)
-texture_normal = ExtResource("2_gefhj")
-texture_pressed = ExtResource("3_44wtp")
 
 [node name="Ogro" parent="." instance=ExtResource("8_3n63b")]
 position = Vector2(400, 630)
@@ -56,10 +49,6 @@ position = Vector2(1082, 662)
 position = Vector2(-1282, -337)
 shape = SubResource("RectangleShape2D_eihh5")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-position = Vector2(365, 438)
-occluder = SubResource("OccluderPolygon2D_2ai71")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -69,5 +58,18 @@ shape = SubResource("RectangleShape2D_8l7tl")
 [node name="StartSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_l6f0u")
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[node name="GUI" parent="." instance=ExtResource("7_w1owe")]
+
+[node name="Obstaculo" parent="." instance=ExtResource("8_p0254")]
+position = Vector2(1520, 0)
+
+[node name="Obstaculo2" parent="." instance=ExtResource("9_btn6k")]
+position = Vector2(0, -1038)
+
+[node name="BackgroundSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_nge36")
+autoplay = true
+bus = &"New Bus"
+
 [connection signal="area_entered" from="area_inicio" to="." method="_on_area_inicio_area_entered"]
+[connection signal="finished" from="BackgroundSound" to="." method="_on_background_sound_finished"]

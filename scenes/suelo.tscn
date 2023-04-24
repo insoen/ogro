@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxlarsx1xj4ll"]
+[gd_scene load_steps=9 format=3 uid="uid://cxlarsx1xj4ll"]
 
 [ext_resource type="Script" path="res://scenes/Suelo.gd" id="1_fbetk"]
 [ext_resource type="Texture2D" uid="uid://d32opvoytkamb" path="res://tiles/background_1.png" id="2_2ymnp"]
 [ext_resource type="Texture2D" uid="uid://d32288ve5g7or" path="res://tiles/suelo_1.png" id="3_bepj3"]
+[ext_resource type="Texture2D" uid="uid://bvmo2dglvqvrn" path="res://tiles/Sign_01.png" id="4_udwt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrnhu"]
 size = Vector2(2046.5, 122)
@@ -11,6 +12,9 @@ size = Vector2(2046.5, 122)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhc81"]
 size = Vector2(9.9848, 8.79999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ommsk"]
+size = Vector2(104.296, 109.949)
 
 [node name="Background" type="Node2D"]
 script = ExtResource("1_fbetk")
@@ -46,3 +50,16 @@ texture = ExtResource("3_bepj3")
 position = Vector2(503.48, 13)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_bhc81")
+
+[node name="Right_arrow_area2D" type="Area2D" parent="."]
+position = Vector2(1069, 645)
+scale = Vector2(0.632812, 0.609375)
+
+[node name="Right_arrow" type="Sprite2D" parent="Right_arrow_area2D" groups=["signs"]]
+texture = ExtResource("4_udwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right_arrow_area2D"]
+position = Vector2(-1.5802, 9.02563)
+shape = SubResource("RectangleShape2D_ommsk")
+
+[connection signal="area_entered" from="Right_arrow_area2D" to="." method="_on_right_arrow_area_2d_area_entered"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://blqwwwwyxp4di"]
+
+[ext_resource type="Script" path="res://scenes/obstaculos/obstaculo_tscn.gd" id="1_bjetx"]
+
+[node name="Obstaculo" type="Node2D"]
+script = ExtResource("1_bjetx")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(462, 99)
+points = PackedVector2Array(-465, 431, 203, 426, 813, 428)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(462, -150)
+points = PackedVector2Array(-465, 431, 203, 426, 813, 428)
+default_color = Color(0, 0, 0, 1)

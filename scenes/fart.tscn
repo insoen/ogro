@@ -1,13 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwjud3vtxtoin"]
+[gd_scene load_steps=5 format=3 uid="uid://dwjud3vtxtoin"]
 
 [ext_resource type="Script" path="res://scenes/fart.gd" id="1_vg25u"]
 [ext_resource type="Texture2D" uid="uid://cnmjlqey4tiuc" path="res://tiles/particle1.png" id="2_5e1lp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kx8n1"]
 radius = 10.5119
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ettrm"]
-load_path = "res://.godot/imported/gas.png-082276a02719c243d366b5aa060732b1.ctex"
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gaen2"]
 emission_shape = 1
@@ -35,8 +32,8 @@ debug_color = Color(0.913725, 0.105882, 0.662745, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(18, 14)
-scale = Vector2(2.3, 2.3)
-texture = SubResource("CompressedTexture2D_ettrm")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_5e1lp")
 
 [node name="fart" type="GPUParticles2D" parent="." groups=["particles"]]
 z_index = -1

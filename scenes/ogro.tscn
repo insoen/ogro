@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://cixa6g7t7kn0m"]
+[gd_scene load_steps=38 format=3 uid="uid://cixa6g7t7kn0m"]
 
 [ext_resource type="Script" path="res://scenes/ogro_endless.gd" id="1_i5yba"]
 [ext_resource type="Texture2D" uid="uid://dm6711uxesqa2" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_000.png" id="2_dakmd"]
@@ -16,115 +16,25 @@
 [ext_resource type="Texture2D" uid="uid://ckxhr4cqw0v34" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_012.png" id="14_j02bp"]
 [ext_resource type="Texture2D" uid="uid://bh5pp61qb6vo6" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_013.png" id="15_bjqnc"]
 [ext_resource type="Texture2D" uid="uid://bvjor8fjwsvl3" path="res://tiles/Dying/Dying_ogre/0_Ogre_Dying_014.png" id="16_81d5x"]
+[ext_resource type="Texture2D" uid="uid://dhhleqtpm0q4n" path="res://tiles/run_ogro/0_Ogre_Running_000.png" id="17_25yed"]
 [ext_resource type="AudioStream" uid="uid://d30j6q8fygvfn" path="res://sounds/jump.mp3" id="17_kg57u"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4a5wa"]
-load_path = "res://.godot/imported/0_Ogre_Idle_000.png-b579f82402e9f4525e995623a909c299.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hb6yn"]
-load_path = "res://.godot/imported/0_Ogre_Idle_001.png-3bfbe121ac1f7bb6507e5a4da94607d9.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hu82w"]
-load_path = "res://.godot/imported/0_Ogre_Idle_002.png-62f12992ab5c70fc853c438921f4434c.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bubn1"]
-load_path = "res://.godot/imported/0_Ogre_Idle_003.png-1fff7043c3a77e99f76f2966d0250631.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mx6lm"]
-load_path = "res://.godot/imported/0_Ogre_Idle_004.png-98a81cd65314eada5670bd34c899ea2f.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5cay6"]
-load_path = "res://.godot/imported/0_Ogre_Idle_006.png-f1d3b4a82761fa4f0b2ab9c38a5b1b2d.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u2cqa"]
-load_path = "res://.godot/imported/0_Ogre_Idle_005.png-92023eaec897633d866c8662e45c622f.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ysvbt"]
-load_path = "res://.godot/imported/0_Ogre_Idle_007.png-05b2e6519db224b9a969a650744fa576.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ejesf"]
-load_path = "res://.godot/imported/0_Ogre_Idle_008.png-81445a087d7dc5d407c2014024992816.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hb16a"]
-load_path = "res://.godot/imported/0_Ogre_Idle_010.png-2a2b945e0fe1ed4df4a7f7754b029269.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_og0h8"]
-load_path = "res://.godot/imported/0_Ogre_Idle_011.png-a458fa08f97850a6b41d71242f60827c.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6j3kn"]
-load_path = "res://.godot/imported/0_Ogre_Idle_009.png-c460ddc42e15d80fecee4c3810b85a0a.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1h7m3"]
-load_path = "res://.godot/imported/0_Ogre_Idle_012.png-7910ff86b3f9eb3bb12e4474dbfa1f23.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b3sp1"]
-load_path = "res://.godot/imported/0_Ogre_Idle_013.png-2220f46c59ed7da878501192a52f4012.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3armt"]
-load_path = "res://.godot/imported/0_Ogre_Idle_014.png-6f5c6b108db2044fc293db56e752fd51.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wtptu"]
-load_path = "res://.godot/imported/0_Ogre_Idle_015.png-89e6a7a431c3f649c9ac79ec4407e7a3.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r6idd"]
-load_path = "res://.godot/imported/0_Ogre_Idle_017.png-34b3ca29e36fd7b4fad072c76bc44bd8.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ja37"]
-load_path = "res://.godot/imported/0_Ogre_Idle_016.png-8ebf9df78582a20882b10c2c9becfa9a.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ttrx6"]
-load_path = "res://.godot/imported/0_Ogre_Running_000.png-3ea06f22116464592634e0f1dfa773db.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_38cq3"]
-load_path = "res://.godot/imported/0_Ogre_Running_001.png-43d35381ebd259caa1ba8700f8cb068d.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jk4sw"]
-load_path = "res://.godot/imported/0_Ogre_Running_002.png-b220b15edbf2237021bf9385b4f6a2de.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s4n31"]
-load_path = "res://.godot/imported/0_Ogre_Running_003.png-7f705f7ac39fe1c1e76ad576fe200517.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7iqns"]
-load_path = "res://.godot/imported/0_Ogre_Running_004.png-3bc795f73b66d0b204b7678599e4c970.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lf2dd"]
-load_path = "res://.godot/imported/0_Ogre_Running_005.png-7d20a94be66328611c4dfea00128f3a2.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h81rt"]
-load_path = "res://.godot/imported/0_Ogre_Running_006.png-b9dcbf3af0528a8fd81444e85a1e3b78.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gjvhw"]
-load_path = "res://.godot/imported/0_Ogre_Running_007.png-edf3c1cfad2aac051667d98b9dec0a4b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o6r1a"]
-load_path = "res://.godot/imported/0_Ogre_Running_008.png-100293cf3161c9894d79f39871227d52.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e4ur5"]
-load_path = "res://.godot/imported/0_Ogre_Running_009.png-36afdaebbed1e0961c36e6938360b603.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cde6s"]
-load_path = "res://.godot/imported/0_Ogre_Running_010.png-23984284b46bb6a51cc542353f25d426.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3oxio"]
-load_path = "res://.godot/imported/0_Ogre_Running_011.png-3ffac1ffe40a4afd5dd403ed61f96bbc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_al530"]
-load_path = "res://.godot/imported/0_Ogre_Jump Start_000.png-682edfe00ed09349318a0729ac16511b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kd8fm"]
-load_path = "res://.godot/imported/0_Ogre_Jump Start_001.png-3a78457febfdb58f25ef665a0174f6be.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uekx2"]
-load_path = "res://.godot/imported/0_Ogre_Jump Start_002.png-3599ed100ef5eb00cbb0edc670864d24.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prpq2"]
-load_path = "res://.godot/imported/0_Ogre_Jump Start_003.png-26382906bccb4fabf5a3849c5198c00a.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_31uid"]
-load_path = "res://.godot/imported/0_Ogre_Jump Start_004.png-138b8df835d8ea539dfeaaffeaf41550.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_018fh"]
-load_path = "res://.godot/imported/0_Ogre_Jump Start_005.png-4dd2963718ab8acb74fc107a8611eec6.ctex"
+[ext_resource type="Texture2D" uid="uid://7bluo664mnyy" path="res://tiles/run_ogro/0_Ogre_Running_001.png" id="18_wymv7"]
+[ext_resource type="Texture2D" uid="uid://irq4aikx6616" path="res://tiles/run_ogro/0_Ogre_Running_002.png" id="19_w26l2"]
+[ext_resource type="Texture2D" uid="uid://dei3ueh13v6ny" path="res://tiles/run_ogro/0_Ogre_Running_003.png" id="20_qoyag"]
+[ext_resource type="Texture2D" uid="uid://cx3cmd8n2qskp" path="res://tiles/run_ogro/0_Ogre_Running_004.png" id="21_3vqdq"]
+[ext_resource type="Texture2D" uid="uid://cwoeh2k88lnko" path="res://tiles/run_ogro/0_Ogre_Running_005.png" id="22_awvnl"]
+[ext_resource type="Texture2D" uid="uid://ddbrqu7y0wgde" path="res://tiles/run_ogro/0_Ogre_Running_006.png" id="23_yubjx"]
+[ext_resource type="Texture2D" uid="uid://2iukgrknlxds" path="res://tiles/run_ogro/0_Ogre_Running_007.png" id="24_t1pjp"]
+[ext_resource type="Texture2D" uid="uid://cq16hxi60wd1g" path="res://tiles/run_ogro/0_Ogre_Running_008.png" id="25_6uek1"]
+[ext_resource type="Texture2D" uid="uid://co6nwodfuj6xg" path="res://tiles/run_ogro/0_Ogre_Running_009.png" id="26_tk4fs"]
+[ext_resource type="Texture2D" uid="uid://dxqbjajka7cdv" path="res://tiles/run_ogro/0_Ogre_Running_010.png" id="27_xcrob"]
+[ext_resource type="Texture2D" uid="uid://b18y8e5t0mbpy" path="res://tiles/run_ogro/0_Ogre_Running_011.png" id="28_xkruv"]
+[ext_resource type="Texture2D" uid="uid://b2lrbtlwvv6up" path="res://tiles/jump_ogro/0_Ogre_Jump Start_000.png" id="29_6ey7r"]
+[ext_resource type="Texture2D" uid="uid://bt6g6uopy6fsv" path="res://tiles/jump_ogro/0_Ogre_Jump Start_001.png" id="30_1nkkr"]
+[ext_resource type="Texture2D" uid="uid://cqydm2r7u4l48" path="res://tiles/jump_ogro/0_Ogre_Jump Start_002.png" id="31_pcgou"]
+[ext_resource type="Texture2D" uid="uid://djkp82c1nlv7h" path="res://tiles/jump_ogro/0_Ogre_Jump Start_003.png" id="32_ifd5i"]
+[ext_resource type="Texture2D" uid="uid://d1je8r4oum1dn" path="res://tiles/jump_ogro/0_Ogre_Jump Start_004.png" id="33_d6hpn"]
+[ext_resource type="Texture2D" uid="uid://d4guchu4yua37" path="res://tiles/jump_ogro/0_Ogre_Jump Start_005.png" id="34_u3pin"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pvrao"]
 animations = [{
@@ -180,99 +90,40 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_4a5wa")
+"texture": ExtResource("17_25yed")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_hb6yn")
+"texture": ExtResource("18_wymv7")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_hu82w")
+"texture": ExtResource("19_w26l2")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_bubn1")
+"texture": ExtResource("20_qoyag")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_mx6lm")
+"texture": ExtResource("21_3vqdq")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_5cay6")
+"texture": ExtResource("22_awvnl")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_u2cqa")
+"texture": ExtResource("23_yubjx")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_ysvbt")
+"texture": ExtResource("24_t1pjp")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_ejesf")
+"texture": ExtResource("25_6uek1")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_hb16a")
+"texture": ExtResource("26_tk4fs")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_og0h8")
+"texture": ExtResource("27_xcrob")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_6j3kn")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_1h7m3")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_b3sp1")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_3armt")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_wtptu")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_r6idd")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_3ja37")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 17.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_ttrx6")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_38cq3")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_jk4sw")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_s4n31")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_7iqns")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_lf2dd")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_h81rt")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_gjvhw")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_o6r1a")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_e4ur5")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_cde6s")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_3oxio")
+"texture": ExtResource("28_xkruv")
 }],
 "loop": true,
 "name": &"run",
@@ -280,22 +131,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_al530")
+"texture": ExtResource("29_6ey7r")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_kd8fm")
+"texture": ExtResource("30_1nkkr")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_uekx2")
+"texture": ExtResource("31_pcgou")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_prpq2")
+"texture": ExtResource("32_ifd5i")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_31uid")
+"texture": ExtResource("33_d6hpn")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_018fh")
+"texture": ExtResource("34_u3pin")
 }],
 "loop": true,
 "name": &"up",
@@ -314,8 +165,7 @@ texture_filter = 1
 position = Vector2(-85, -101)
 scale = Vector2(0.197, 0.2)
 sprite_frames = SubResource("SpriteFrames_pvrao")
-animation = &"die"
-autoplay = "idle"
+animation = &"up"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -13,7 +13,6 @@ func _process(delta):
 	if main.in_game:
 		position.x = position.x - bg_velocity
 
-
-
-	
-
+func _on_right_arrow_area_2d_area_entered(area):
+	if area.name == "area_inicio":
+		$Right_arrow_area2D.queue_free()

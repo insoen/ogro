@@ -1,7 +1,29 @@
-[gd_scene format=3 uid="uid://ddh5cnlyyaqfl"]
+[gd_scene load_steps=5 format=3 uid="uid://ddh5cnlyyaqfl"]
 
-[node name="Obstaculo1" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/obstaculos/obstaculo_tscn.gd" id="1_gn8pt"]
+[ext_resource type="Texture2D" uid="uid://dsavhvi4ox8ma" path="res://tiles/blocks/Brick_01.png" id="1_vjvd0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nbmyl"]
+texture = ExtResource("1_vjvd0")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_usshs"]
+sources/0 = SubResource("TileSetAtlasSource_nbmyl")
+
+[node name="Obstaculo" type="Node2D"]
+script = ExtResource("1_gn8pt")
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(462, 99)
 points = PackedVector2Array(-465, 431, 203, 426, 813, 428)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(462, -150)
+points = PackedVector2Array(-465, 431, 203, 426, 813, 428)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(81, 483)
+tile_set = SubResource("TileSet_usshs")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65527, 0, 0, -65519, 0, 0, -65511, 0, 0, -1179616, 0, 0, -1179608, 0, 0, -65487, 0, 0, -65479, 0, 0)
