@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdmxe5gc587xm"]
+
+[ext_resource type="Script" path="res://scenes/obstaculos/obstaculo_tscn.gd" id="1_jdyby"]
+[ext_resource type="PackedScene" uid="uid://davx44tkys8dr" path="res://scenes/obstaculos/muro.tscn" id="2_a0aiq"]
+[ext_resource type="PackedScene" uid="uid://dbe1jco44rkp7" path="res://scenes/obstaculos/spike.tscn" id="3_ba73i"]
+[ext_resource type="PackedScene" uid="uid://5u8mhq040nx7" path="res://scenes/obstaculos/enemy2_fijo.tscn" id="4_hf2vw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymaxd"]
+size = Vector2(13, 740)
+
+[node name="Obstaculo" type="Node2D"]
+script = ExtResource("1_jdyby")
+
+[node name="muro" parent="." instance=ExtResource("2_a0aiq")]
+position = Vector2(231, 527)
+
+[node name="muro2" parent="." instance=ExtResource("2_a0aiq")]
+position = Vector2(413, 528)
+
+[node name="muro3" parent="." instance=ExtResource("2_a0aiq")]
+position = Vector2(596, 527)
+
+[node name="muro4" parent="." instance=ExtResource("2_a0aiq")]
+position = Vector2(585, 285)
+
+[node name="fin_obstaculo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fin_obstaculo"]
+position = Vector2(1280.5, 356)
+shape = SubResource("RectangleShape2D_ymaxd")
+
+[node name="Spike" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(169, 25)
+rotation = 3.14159
+
+[node name="Spike2" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(233, 25)
+rotation = 3.14159
+
+[node name="Spike3" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(298, 25)
+rotation = 3.14159
+
+[node name="Spike4" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(364, 25)
+rotation = 3.14159
+
+[node name="Spike5" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(429, 25)
+rotation = 3.14159
+
+[node name="Spike6" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(493, 25)
+rotation = 3.14159
+
+[node name="Spike7" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(558, 25)
+rotation = 3.14159
+
+[node name="Spike8" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(624, 25)
+rotation = 3.14159
+
+[node name="Spike9" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(169, 282)
+
+[node name="Spike10" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(233, 282)
+
+[node name="Spike11" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(298, 282)
+
+[node name="Spike12" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(357, 282)
+
+[node name="Spike13" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(422, 282)
+
+[node name="Spike14" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(486, 282)
+
+[node name="Spike15" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(551, 282)
+
+[node name="Spike16" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(617, 282)
+
+[node name="Spike17" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(169, 347)
+rotation = -1.5708
+
+[node name="Spike18" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(168, 411)
+rotation = -1.5708
+
+[node name="Spike19" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(169, 476)
+rotation = -1.5708
+
+[node name="Spike20" parent="." instance=ExtResource("3_ba73i")]
+position = Vector2(168, 523)
+rotation = -1.5708
+
+[node name="Enemy2" parent="." instance=ExtResource("4_hf2vw")]
+position = Vector2(259, -91)

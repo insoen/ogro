@@ -1,18 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddh5cnlyyaqfl"]
 
-[ext_resource type="Script" path="res://scenes/obstaculos/obstaculo_tscn.gd" id="1_gn8pt"]
-[ext_resource type="Texture2D" uid="uid://dsavhvi4ox8ma" path="res://tiles/blocks/Brick_01.png" id="1_vjvd0"]
+[ext_resource type="Script" path="res://scenes/obstaculos/obstaculo_tscn.gd" id="1_3ta81"]
+[ext_resource type="PackedScene" uid="uid://davx44tkys8dr" path="res://scenes/obstaculos/muro.tscn" id="2_lqhy5"]
+[ext_resource type="PackedScene" uid="uid://dbe1jco44rkp7" path="res://scenes/obstaculos/spike.tscn" id="3_3qqil"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nbmyl"]
-texture = ExtResource("1_vjvd0")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_usshs"]
-sources/0 = SubResource("TileSetAtlasSource_nbmyl")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymaxd"]
+size = Vector2(13, 740)
 
 [node name="Obstaculo" type="Node2D"]
-script = ExtResource("1_gn8pt")
+script = ExtResource("1_3ta81")
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(462, 99)
@@ -22,8 +18,92 @@ points = PackedVector2Array(-465, 431, 203, 426, 813, 428)
 position = Vector2(462, -150)
 points = PackedVector2Array(-465, 431, 203, 426, 813, 428)
 
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2(81, 483)
-tile_set = SubResource("TileSet_usshs")
-format = 2
-layer_0/tile_data = PackedInt32Array(-65527, 0, 0, -65519, 0, 0, -65511, 0, 0, -1179616, 0, 0, -1179608, 0, 0, -65487, 0, 0, -65479, 0, 0)
+[node name="muro" parent="." instance=ExtResource("2_lqhy5")]
+position = Vector2(231, 527)
+
+[node name="muro2" parent="." instance=ExtResource("2_lqhy5")]
+position = Vector2(413, 528)
+
+[node name="muro3" parent="." instance=ExtResource("2_lqhy5")]
+position = Vector2(596, 527)
+
+[node name="muro4" parent="." instance=ExtResource("2_lqhy5")]
+position = Vector2(585, 285)
+
+[node name="fin_obstaculo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fin_obstaculo"]
+position = Vector2(1280.5, 356)
+shape = SubResource("RectangleShape2D_ymaxd")
+
+[node name="Spike" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(169, 25)
+rotation = 3.14159
+
+[node name="Spike2" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(233, 25)
+rotation = 3.14159
+
+[node name="Spike3" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(298, 25)
+rotation = 3.14159
+
+[node name="Spike4" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(364, 25)
+rotation = 3.14159
+
+[node name="Spike5" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(429, 25)
+rotation = 3.14159
+
+[node name="Spike6" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(493, 25)
+rotation = 3.14159
+
+[node name="Spike7" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(558, 25)
+rotation = 3.14159
+
+[node name="Spike8" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(624, 25)
+rotation = 3.14159
+
+[node name="Spike9" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(169, 282)
+
+[node name="Spike10" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(233, 282)
+
+[node name="Spike11" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(298, 282)
+
+[node name="Spike12" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(357, 282)
+
+[node name="Spike13" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(422, 282)
+
+[node name="Spike14" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(486, 282)
+
+[node name="Spike15" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(551, 282)
+
+[node name="Spike16" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(617, 282)
+
+[node name="Spike17" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(169, 347)
+rotation = -1.5708
+
+[node name="Spike18" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(168, 411)
+rotation = -1.5708
+
+[node name="Spike19" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(169, 476)
+rotation = -1.5708
+
+[node name="Spike20" parent="." instance=ExtResource("3_3qqil")]
+position = Vector2(168, 523)
+rotation = -1.5708

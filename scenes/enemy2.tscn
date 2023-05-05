@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bilsr8xpdgum3"]
+[gd_scene load_steps=34 format=3 uid="uid://bilsr8xpdgum3"]
 
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_k5cvl"]
 [ext_resource type="Texture2D" uid="uid://cghc64hqr03sr" path="res://tiles/Run Slashing/0_Orc_Run Slashing_000.png" id="2_63fqh"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://b3ckpinshjvof" path="res://tiles/Dying_orc/0_Orc_Dying_012.png" id="26_u5l5k"]
 [ext_resource type="Texture2D" uid="uid://w5w4aegfxwo5" path="res://tiles/Dying_orc/0_Orc_Dying_013.png" id="27_r4hc0"]
 [ext_resource type="Texture2D" uid="uid://dew8q3e2oeol5" path="res://tiles/Dying_orc/0_Orc_Dying_014.png" id="28_aryd2"]
+[ext_resource type="AudioStream" uid="uid://byr2dh18qylv3" path="res://sounds/gruñido.mp3" id="30_gldh1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_52wgl"]
 size = Vector2(119, 107)
@@ -127,6 +128,9 @@ animations = [{
 "speed": 14.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c0ul"]
+size = Vector2(29, 132)
+
 [node name="Enemy2" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_k5cvl")
 
@@ -144,4 +148,14 @@ flip_h = true
 
 [node name="explosion_enemy" parent="." instance=ExtResource("14_18ux5")]
 
+[node name="Gruñido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_gldh1")
+
+[node name="Cerca" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cerca"]
+position = Vector2(201.5, 529)
+shape = SubResource("RectangleShape2D_7c0ul")
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="Cerca" to="." method="_on_cerca_body_entered"]

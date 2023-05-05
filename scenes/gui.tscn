@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dkq21lbw5ndo1"]
+[gd_scene load_steps=13 format=3 uid="uid://dkq21lbw5ndo1"]
 
 [ext_resource type="Script" path="res://scenes/gui.gd" id="1_rghob"]
 [ext_resource type="Texture2D" uid="uid://vyndo7gksr3f" path="res://gui/play_normal.png" id="1_tv2iy"]
@@ -9,10 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://brlfdfap4rb65" path="res://gui/restart_pressed.png" id="7_6s2tj"]
 [ext_resource type="FontFile" uid="uid://bp18k4jms57y5" path="res://font/Bellota-Bold.ttf" id="8_vfso8"]
 [ext_resource type="Texture2D" uid="uid://cy1fka8hipseu" path="res://gui/log-out.png" id="9_03wwa"]
+[ext_resource type="Texture2D" uid="uid://dukqhedds56on" path="res://tiles/blocks/Key_01.png" id="10_qh4xf"]
 
 [sub_resource type="Theme" id="Theme_okrjm"]
 default_font = ExtResource("8_vfso8")
 default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_0mugn"]
 
 [node name="GUI" type="Node2D"]
 script = ExtResource("1_rghob")
@@ -38,10 +41,10 @@ texture_normal = ExtResource("6_0hrat")
 texture_pressed = ExtResource("7_6s2tj")
 
 [node name="ScoreText" type="RichTextLabel" parent="."]
-offset_left = 25.0
-offset_top = 22.0
-offset_right = 354.0
-offset_bottom = 62.0
+offset_left = 192.0
+offset_top = 21.0
+offset_right = 521.0
+offset_bottom = 61.0
 theme = SubResource("Theme_okrjm")
 text = "Score: 0"
 scroll_active = false
@@ -61,6 +64,23 @@ position = Vector2(1217, 8)
 scale = Vector2(0.0996093, 0.0878906)
 texture_normal = ExtResource("9_03wwa")
 texture_pressed = ExtResource("9_03wwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(61, 41)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_qh4xf")
+
+[node name="KeyText" type="RichTextLabel" parent="."]
+offset_left = 109.0
+offset_top = 19.0
+offset_right = 185.0
+offset_bottom = 59.0
+theme = SubResource("Theme_0mugn")
+theme_override_fonts/normal_font = ExtResource("8_vfso8")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "0"
+scroll_active = false
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Down" to="." method="_on_down_pressed"]

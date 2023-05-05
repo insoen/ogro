@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbkq71kpqdpjf"]
+
+[ext_resource type="Script" path="res://scenes/chillies.gd" id="1_yaskm"]
+[ext_resource type="PackedScene" uid="uid://box1glm87fjof" path="res://scenes/chilli.tscn" id="1_yxnw2"]
+
+[node name="Chilliex10" type="Node2D"]
+script = ExtResource("1_yaskm")
+
+[node name="Chilli" parent="." instance=ExtResource("1_yxnw2")]
+
+[node name="Chilli2" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(73, 46)
+
+[node name="Chilli3" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(146, 3)
+
+[node name="Chilli4" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(217, 49)
+
+[node name="Chilli5" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(288, 3)
+
+[node name="Chilli6" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(1, 97)
+
+[node name="Chilli7" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(140, 95)
+
+[node name="Chilli8" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(287, 97)
+
+[node name="Chilli9" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(67, 144)
+
+[node name="Chilli10" parent="." instance=ExtResource("1_yxnw2")]
+position = Vector2(208, 143)

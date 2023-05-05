@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3 uid="uid://csp20tps31nco"]
+
+[ext_resource type="Script" path="res://scenes/obstaculos/obstaculo_tscn.gd" id="1_3nox5"]
+[ext_resource type="PackedScene" uid="uid://davx44tkys8dr" path="res://scenes/obstaculos/muro.tscn" id="2_k1weq"]
+[ext_resource type="PackedScene" uid="uid://dbe1jco44rkp7" path="res://scenes/obstaculos/spike.tscn" id="3_g71qh"]
+[ext_resource type="Texture2D" uid="uid://dda1ypm6xwny1" path="res://tiles/Sign_02.png" id="4_l587m"]
+[ext_resource type="PackedScene" uid="uid://dys3lx25h5rfc" path="res://scenes/key.tscn" id="5_v3n1y"]
+[ext_resource type="PackedScene" uid="uid://gb4okrrhuit2" path="res://scenes/chest.tscn" id="6_0i3nx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymaxd"]
+size = Vector2(13, 740)
+
+[node name="Obstaculo" type="Node2D"]
+position = Vector2(634, 5)
+script = ExtResource("1_3nox5")
+metadata/_edit_group_ = true
+
+[node name="muro" parent="." instance=ExtResource("2_k1weq")]
+position = Vector2(231, 527)
+
+[node name="muro2" parent="." instance=ExtResource("2_k1weq")]
+position = Vector2(413, 528)
+
+[node name="muro3" parent="." instance=ExtResource("2_k1weq")]
+position = Vector2(596, 527)
+
+[node name="muro4" parent="." instance=ExtResource("2_k1weq")]
+position = Vector2(585, 301)
+
+[node name="fin_obstaculo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fin_obstaculo"]
+position = Vector2(1280.5, 356)
+shape = SubResource("RectangleShape2D_ymaxd")
+
+[node name="Spike" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(167, -29)
+rotation = 3.14159
+
+[node name="Spike2" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(233, -29)
+rotation = 3.14159
+
+[node name="Spike3" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(298, -29)
+rotation = 3.14159
+
+[node name="Spike4" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(364, -29)
+rotation = 3.14159
+
+[node name="Spike5" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(429, -29)
+rotation = 3.14159
+
+[node name="Spike6" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(493, -29)
+rotation = 3.14159
+
+[node name="Spike7" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(558, -29)
+rotation = 3.14159
+
+[node name="Spike8" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(624, -29)
+rotation = 3.14159
+
+[node name="Spike9" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(170, 303)
+
+[node name="Spike10" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(233, 303)
+
+[node name="Spike11" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(298, 303)
+
+[node name="Spike12" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(357, 303)
+
+[node name="Spike13" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(422, 303)
+
+[node name="Spike14" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(486, 303)
+
+[node name="Spike15" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(551, 303)
+
+[node name="Spike16" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(617, 303)
+
+[node name="Spike17" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(169, 347)
+rotation = -1.5708
+
+[node name="Spike18" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(168, 411)
+rotation = -1.5708
+
+[node name="Spike19" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(169, 476)
+rotation = -1.5708
+
+[node name="Spike20" parent="." instance=ExtResource("3_g71qh")]
+position = Vector2(168, 523)
+rotation = -1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-573, 654)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_l587m")
+
+[node name="Key" parent="." instance=ExtResource("5_v3n1y")]
+z_index = -1
+position = Vector2(46, 140)
+scale = Vector2(0.75, 0.75)
+
+[node name="Chest" parent="." instance=ExtResource("6_0i3nx")]
+position = Vector2(876, 285)

@@ -1,0 +1,161 @@
+[gd_scene load_steps=34 format=3 uid="uid://5u8mhq040nx7"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_m2aos"]
+[ext_resource type="Texture2D" uid="uid://cghc64hqr03sr" path="res://tiles/Run Slashing/0_Orc_Run Slashing_000.png" id="2_4qmst"]
+[ext_resource type="Texture2D" uid="uid://cwa1vkdoh86lf" path="res://tiles/Run Slashing/0_Orc_Run Slashing_001.png" id="3_piuxu"]
+[ext_resource type="Texture2D" uid="uid://bw2enjmmmhii6" path="res://tiles/Run Slashing/0_Orc_Run Slashing_002.png" id="4_p5420"]
+[ext_resource type="Texture2D" uid="uid://dthwwwn4kh0ip" path="res://tiles/Run Slashing/0_Orc_Run Slashing_003.png" id="5_4fvyl"]
+[ext_resource type="Texture2D" uid="uid://dabwr7wf1a586" path="res://tiles/Run Slashing/0_Orc_Run Slashing_004.png" id="6_sniv4"]
+[ext_resource type="Texture2D" uid="uid://cn1xcwxeue1ue" path="res://tiles/Run Slashing/0_Orc_Run Slashing_005.png" id="7_yn5xf"]
+[ext_resource type="Texture2D" uid="uid://blfh6qqkoba4o" path="res://tiles/Run Slashing/0_Orc_Run Slashing_006.png" id="8_qmj57"]
+[ext_resource type="Texture2D" uid="uid://bkjhq8hen3ts0" path="res://tiles/Run Slashing/0_Orc_Run Slashing_007.png" id="9_uwm3d"]
+[ext_resource type="Texture2D" uid="uid://bx7cqqmmr016g" path="res://tiles/Run Slashing/0_Orc_Run Slashing_008.png" id="10_y2sw4"]
+[ext_resource type="Texture2D" uid="uid://bogfmrasg523f" path="res://tiles/Run Slashing/0_Orc_Run Slashing_009.png" id="11_wft4t"]
+[ext_resource type="Texture2D" uid="uid://b68p22i0qtpf2" path="res://tiles/Run Slashing/0_Orc_Run Slashing_010.png" id="12_pea1s"]
+[ext_resource type="Texture2D" uid="uid://crgqblaf2gceu" path="res://tiles/Run Slashing/0_Orc_Run Slashing_011.png" id="13_4e1tv"]
+[ext_resource type="Texture2D" uid="uid://dplapsk286gov" path="res://tiles/Dying_orc/0_Orc_Dying_000.png" id="14_m4ctq"]
+[ext_resource type="Texture2D" uid="uid://ctr8t54icklax" path="res://tiles/Dying_orc/0_Orc_Dying_001.png" id="15_i7gos"]
+[ext_resource type="Texture2D" uid="uid://dnruyijs78met" path="res://tiles/Dying_orc/0_Orc_Dying_002.png" id="16_arrvp"]
+[ext_resource type="Texture2D" uid="uid://cj0ttx7orwjda" path="res://tiles/Dying_orc/0_Orc_Dying_003.png" id="17_hejc8"]
+[ext_resource type="Texture2D" uid="uid://bdeqihj0pp0k6" path="res://tiles/Dying_orc/0_Orc_Dying_004.png" id="18_q0rxi"]
+[ext_resource type="Texture2D" uid="uid://cm00d6dosmb2v" path="res://tiles/Dying_orc/0_Orc_Dying_005.png" id="19_lbcnu"]
+[ext_resource type="Texture2D" uid="uid://kqg3ksdaaqts" path="res://tiles/Dying_orc/0_Orc_Dying_006.png" id="20_83o3e"]
+[ext_resource type="Texture2D" uid="uid://31cpd44pjcyl" path="res://tiles/Dying_orc/0_Orc_Dying_007.png" id="21_soxun"]
+[ext_resource type="Texture2D" uid="uid://cbwkp13ke7w7b" path="res://tiles/Dying_orc/0_Orc_Dying_008.png" id="22_38moy"]
+[ext_resource type="Texture2D" uid="uid://sp3tlj81aa06" path="res://tiles/Dying_orc/0_Orc_Dying_009.png" id="23_pp8tm"]
+[ext_resource type="Texture2D" uid="uid://bjhcq0ap2hn7e" path="res://tiles/Dying_orc/0_Orc_Dying_010.png" id="24_uxl2l"]
+[ext_resource type="Texture2D" uid="uid://12yc3laalfhk" path="res://tiles/Dying_orc/0_Orc_Dying_011.png" id="25_8oqji"]
+[ext_resource type="Texture2D" uid="uid://b3ckpinshjvof" path="res://tiles/Dying_orc/0_Orc_Dying_012.png" id="26_6gomv"]
+[ext_resource type="Texture2D" uid="uid://w5w4aegfxwo5" path="res://tiles/Dying_orc/0_Orc_Dying_013.png" id="27_bgt5n"]
+[ext_resource type="Texture2D" uid="uid://dew8q3e2oeol5" path="res://tiles/Dying_orc/0_Orc_Dying_014.png" id="28_envhb"]
+[ext_resource type="PackedScene" uid="uid://47ipjp6uithv" path="res://scenes/explosion_enemy.tscn" id="29_b5b6o"]
+[ext_resource type="AudioStream" uid="uid://byr2dh18qylv3" path="res://sounds/gruñido.mp3" id="30_16k4u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52wgl"]
+size = Vector2(119, 107)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d82fi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4qmst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_piuxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p5420")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4fvyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sniv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yn5xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qmj57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uwm3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y2sw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wft4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pea1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4e1tv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_m4ctq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i7gos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_arrvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hejc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q0rxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_lbcnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_83o3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_soxun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_38moy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pp8tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_uxl2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8oqji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_6gomv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bgt5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_envhb")
+}],
+"loop": false,
+"name": &"die",
+"speed": 14.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5pec"]
+size = Vector2(29, 132)
+
+[node name="Enemy2" type="Area2D" groups=["enemies", "fijo"]]
+script = ExtResource("1_m2aos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(425.5, 529.5)
+shape = SubResource("RectangleShape2D_52wgl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(446, 513)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_d82fi")
+animation = &"die"
+frame_progress = 0.738186
+flip_h = true
+
+[node name="explosion_enemy" parent="." instance=ExtResource("29_b5b6o")]
+
+[node name="Gruñido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_16k4u")
+
+[node name="Cerca" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cerca"]
+position = Vector2(201.5, 529)
+shape = SubResource("RectangleShape2D_h5pec")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="Cerca" to="." method="_on_cerca_body_entered"]

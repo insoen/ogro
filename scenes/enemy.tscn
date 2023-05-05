@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dp16uvtw6arpm"]
+[gd_scene load_steps=34 format=3 uid="uid://dp16uvtw6arpm"]
 
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_4p1f3"]
 [ext_resource type="Texture2D" uid="uid://brn2xc6j1roql" path="res://tiles/0_Goblin_Run Slashing_000.png" id="2_elba3"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cb4su0qs3wngg" path="res://tiles/Dying_goblin/0_Goblin_Dying_012.png" id="26_s5ywr"]
 [ext_resource type="Texture2D" uid="uid://7e8nt2w508w8" path="res://tiles/Dying_goblin/0_Goblin_Dying_013.png" id="27_3130p"]
 [ext_resource type="Texture2D" uid="uid://c0khdypmrgdx2" path="res://tiles/Dying_goblin/0_Goblin_Dying_014.png" id="28_xljj7"]
+[ext_resource type="AudioStream" uid="uid://byr2dh18qylv3" path="res://sounds/gruñido.mp3" id="30_q0tiv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_52wgl"]
 size = Vector2(119, 107)
@@ -127,6 +128,9 @@ animations = [{
 "speed": 14.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhy7a"]
+size = Vector2(29, 132)
+
 [node name="Enemy" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_4p1f3")
 
@@ -144,4 +148,14 @@ flip_h = true
 
 [node name="explosion_enemy" parent="." instance=ExtResource("14_byo15")]
 
+[node name="Gruñido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_q0tiv")
+
+[node name="Cerca" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cerca"]
+position = Vector2(201.5, 529)
+shape = SubResource("RectangleShape2D_vhy7a")
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="Cerca" to="." method="_on_cerca_body_entered"]

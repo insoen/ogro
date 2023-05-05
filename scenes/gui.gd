@@ -13,8 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(main.key)
 	if main.in_game:
 		$ScoreText.text = "Score: "+str(main.score)
+		$KeyText.text = str(main.key)
 	else:
 		$FinalScoreText.text = "Final score: "+str(main.score)
 		$ScoreText.text = "Score: "+str(main.score)	

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbe1jco44rkp7"]
+
+[ext_resource type="Texture2D" uid="uid://bs2qxpaqym43u" path="res://tiles/blocks/Brick_02.png" id="1_23rtx"]
+[ext_resource type="Texture2D" uid="uid://bh2o3au8ij5j1" path="res://tiles/blocks/Spikes.png" id="2_wf0k8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k43qh"]
+size = Vector2(108.874, 44.0524)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmwn3"]
+size = Vector2(65.5556, 67.7778)
+
+[node name="Spike" type="Node2D"]
+scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_23rtx")
+
+[node name="spike" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, -56.6667)
+scale = Vector2(0.55, 0.664)
+texture = ExtResource("2_wf0k8")
+
+[node name="Area2D" type="Area2D" parent="spike" groups=["enemies"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spike/Area2D"]
+position = Vector2(-0.735635, 4.97382)
+shape = SubResource("RectangleShape2D_k43qh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.555555, -0.555555)
+shape = SubResource("RectangleShape2D_tmwn3")

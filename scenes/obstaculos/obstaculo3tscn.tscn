@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://uu3jm41m8x1l"]
+
+[ext_resource type="Script" path="res://scenes/obstaculos/obstaculo_tscn.gd" id="1_l4e8o"]
+[ext_resource type="PackedScene" uid="uid://davx44tkys8dr" path="res://scenes/obstaculos/muro.tscn" id="2_j0bsa"]
+[ext_resource type="PackedScene" uid="uid://dbe1jco44rkp7" path="res://scenes/obstaculos/spike.tscn" id="3_6kqbx"]
+[ext_resource type="PackedScene" uid="uid://gr1hhmry52px" path="res://scenes/obstaculos/enemy_fijo.tscn" id="4_mm1pg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymaxd"]
+size = Vector2(13, 740)
+
+[node name="Obstaculo" type="Node2D"]
+script = ExtResource("1_l4e8o")
+
+[node name="muro3" parent="." instance=ExtResource("2_j0bsa")]
+position = Vector2(324, 526)
+
+[node name="muro4" parent="." instance=ExtResource("2_j0bsa")]
+position = Vector2(510, 526)
+
+[node name="fin_obstaculo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fin_obstaculo"]
+position = Vector2(1280.5, 356)
+shape = SubResource("RectangleShape2D_ymaxd")
+
+[node name="Spike" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(232, 224)
+rotation = -1.5708
+
+[node name="Spike2" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(231, 161)
+rotation = -1.5708
+
+[node name="Spike3" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(230, 33)
+rotation = -1.5708
+
+[node name="Spike4" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(230, 96)
+rotation = -1.5708
+
+[node name="Spike5" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(977, 222)
+rotation = -1.5708
+
+[node name="Spike6" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(976, 159)
+rotation = -1.5708
+
+[node name="Spike7" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(975, 31)
+rotation = -1.5708
+
+[node name="Spike8" parent="." instance=ExtResource("3_6kqbx")]
+position = Vector2(975, 94)
+rotation = -1.5708
+
+[node name="Enemy" parent="." instance=ExtResource("4_mm1pg")]
+position = Vector2(173, -92)

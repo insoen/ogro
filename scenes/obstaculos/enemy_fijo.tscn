@@ -1,0 +1,161 @@
+[gd_scene load_steps=34 format=3 uid="uid://gr1hhmry52px"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_28u63"]
+[ext_resource type="Texture2D" uid="uid://brn2xc6j1roql" path="res://tiles/0_Goblin_Run Slashing_000.png" id="2_vnr7g"]
+[ext_resource type="Texture2D" uid="uid://dnd4p4vqu1ua4" path="res://tiles/0_Goblin_Run Slashing_001.png" id="3_mxctd"]
+[ext_resource type="Texture2D" uid="uid://dufmyac6oe1vy" path="res://tiles/0_Goblin_Run Slashing_002.png" id="4_le8wk"]
+[ext_resource type="Texture2D" uid="uid://c1phc40f7xuen" path="res://tiles/0_Goblin_Run Slashing_003.png" id="5_ultv4"]
+[ext_resource type="Texture2D" uid="uid://bl1kyu2cg6yjw" path="res://tiles/0_Goblin_Run Slashing_004.png" id="6_6rcwf"]
+[ext_resource type="Texture2D" uid="uid://l5a28mo8jtre" path="res://tiles/0_Goblin_Run Slashing_005.png" id="7_c21xa"]
+[ext_resource type="Texture2D" uid="uid://he15320uleio" path="res://tiles/0_Goblin_Run Slashing_006.png" id="8_0ixs4"]
+[ext_resource type="Texture2D" uid="uid://drxhsk5wtlfpg" path="res://tiles/0_Goblin_Run Slashing_007.png" id="9_xdyr2"]
+[ext_resource type="Texture2D" uid="uid://drlhvyawk0j2e" path="res://tiles/0_Goblin_Run Slashing_008.png" id="10_d506y"]
+[ext_resource type="Texture2D" uid="uid://c0754vhkd68ks" path="res://tiles/0_Goblin_Run Slashing_009.png" id="11_ptakh"]
+[ext_resource type="Texture2D" uid="uid://dvkgsvqg7n1hu" path="res://tiles/0_Goblin_Run Slashing_010.png" id="12_erj8r"]
+[ext_resource type="Texture2D" uid="uid://ds35buao2ertb" path="res://tiles/0_Goblin_Run Slashing_011.png" id="13_vsnhc"]
+[ext_resource type="Texture2D" uid="uid://cx1radty7wfji" path="res://tiles/Dying_goblin/0_Goblin_Dying_000.png" id="14_vpxuq"]
+[ext_resource type="Texture2D" uid="uid://br47juhcvcmq0" path="res://tiles/Dying_goblin/0_Goblin_Dying_001.png" id="15_i8l8o"]
+[ext_resource type="Texture2D" uid="uid://b0sce7xkftijk" path="res://tiles/Dying_goblin/0_Goblin_Dying_002.png" id="16_rkuut"]
+[ext_resource type="Texture2D" uid="uid://c7buslrh5yxix" path="res://tiles/Dying_goblin/0_Goblin_Dying_003.png" id="17_04nho"]
+[ext_resource type="Texture2D" uid="uid://mhocykdajcvh" path="res://tiles/Dying_goblin/0_Goblin_Dying_004.png" id="18_nc052"]
+[ext_resource type="Texture2D" uid="uid://cpcicei3ljeci" path="res://tiles/Dying_goblin/0_Goblin_Dying_005.png" id="19_14dp0"]
+[ext_resource type="Texture2D" uid="uid://mubvb81jt6yy" path="res://tiles/Dying_goblin/0_Goblin_Dying_006.png" id="20_u8ion"]
+[ext_resource type="Texture2D" uid="uid://8o0ji7tk2hxl" path="res://tiles/Dying_goblin/0_Goblin_Dying_007.png" id="21_yuier"]
+[ext_resource type="Texture2D" uid="uid://c2m2ufkjqgex6" path="res://tiles/Dying_goblin/0_Goblin_Dying_008.png" id="22_6xvue"]
+[ext_resource type="Texture2D" uid="uid://pym7kga0oxwm" path="res://tiles/Dying_goblin/0_Goblin_Dying_009.png" id="23_6m24l"]
+[ext_resource type="Texture2D" uid="uid://bfea3fgwf74bm" path="res://tiles/Dying_goblin/0_Goblin_Dying_010.png" id="24_i3w0p"]
+[ext_resource type="Texture2D" uid="uid://dy5v5um7x5gur" path="res://tiles/Dying_goblin/0_Goblin_Dying_011.png" id="25_kgni7"]
+[ext_resource type="Texture2D" uid="uid://cb4su0qs3wngg" path="res://tiles/Dying_goblin/0_Goblin_Dying_012.png" id="26_lgylx"]
+[ext_resource type="Texture2D" uid="uid://7e8nt2w508w8" path="res://tiles/Dying_goblin/0_Goblin_Dying_013.png" id="27_cucjf"]
+[ext_resource type="Texture2D" uid="uid://c0khdypmrgdx2" path="res://tiles/Dying_goblin/0_Goblin_Dying_014.png" id="28_dbfrd"]
+[ext_resource type="PackedScene" uid="uid://47ipjp6uithv" path="res://scenes/explosion_enemy.tscn" id="29_mjn3b"]
+[ext_resource type="AudioStream" uid="uid://byr2dh18qylv3" path="res://sounds/gruñido.mp3" id="30_hrx8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52wgl"]
+size = Vector2(119, 107)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5oc8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vnr7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mxctd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_le8wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ultv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6rcwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c21xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0ixs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xdyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d506y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ptakh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_erj8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vsnhc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_vpxuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i8l8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rkuut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_04nho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nc052")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_14dp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_u8ion")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yuier")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6xvue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6m24l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_i3w0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kgni7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_lgylx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_cucjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dbfrd")
+}],
+"loop": false,
+"name": &"die",
+"speed": 14.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhafu"]
+size = Vector2(29, 132)
+
+[node name="Enemy" type="Area2D" groups=["enemies", "fijo"]]
+script = ExtResource("1_28u63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(425.5, 529.5)
+shape = SubResource("RectangleShape2D_52wgl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(446, 513)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_5oc8c")
+animation = &"die"
+flip_h = true
+
+[node name="explosion_enemy" parent="." instance=ExtResource("29_mjn3b")]
+
+[node name="Gruñido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_hrx8r")
+
+[node name="Cerca" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cerca"]
+position = Vector2(201.5, 529)
+shape = SubResource("RectangleShape2D_vhafu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered" flags=18]
+[connection signal="body_entered" from="Cerca" to="." method="_on_cerca_body_entered"]

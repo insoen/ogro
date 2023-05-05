@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://davx44tkys8dr"]
+
+[ext_resource type="Texture2D" uid="uid://dsavhvi4ox8ma" path="res://tiles/blocks/Brick_01.png" id="1_cryst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48d2i"]
+size = Vector2(179, 54)
+
+[node name="muro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cryst")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(62, 0)
+texture = ExtResource("1_cryst")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(124, 0)
+texture = ExtResource("1_cryst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(61.5, 0)
+shape = SubResource("RectangleShape2D_48d2i")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cuoqbj73jumxs"]
+[gd_scene load_steps=19 format=3 uid="uid://cuoqbj73jumxs"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_xuw78"]
 [ext_resource type="PackedScene" uid="uid://cxlarsx1xj4ll" path="res://scenes/suelo.tscn" id="3_8cn15"]
@@ -7,9 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://cixa6g7t7kn0m" path="res://scenes/ogro.tscn" id="8_3n63b"]
 [ext_resource type="AudioStream" uid="uid://d30j6q8fygvfn" path="res://sounds/jump.mp3" id="8_l6f0u"]
 [ext_resource type="PackedScene" uid="uid://bilsr8xpdgum3" path="res://scenes/enemy2.tscn" id="8_l8y3e"]
-[ext_resource type="PackedScene" uid="uid://blqwwwwyxp4di" path="res://scenes/obstaculos/obstaculo1tscn.tscn" id="8_p0254"]
-[ext_resource type="PackedScene" uid="uid://ddh5cnlyyaqfl" path="res://scenes/obstaculos/obstaculo_base.tscn" id="9_btn6k"]
+[ext_resource type="PackedScene" uid="uid://blqwwwwyxp4di" path="res://scenes/obstaculos/obstaculo1tscn.tscn" id="9_6neaj"]
+[ext_resource type="PackedScene" uid="uid://fxuplaphfeaq" path="res://scenes/chilli_3.tscn" id="10_b5mqa"]
+[ext_resource type="PackedScene" uid="uid://vcvb18yiqn0s" path="res://scenes/obstaculos/obstaculo2tscn.tscn" id="10_d8b1p"]
 [ext_resource type="AudioStream" uid="uid://cu8k66xktqeie" path="res://sounds/416512__carloscarty__medieval-flute-loop-124-bpm.wav" id="10_nge36"]
+[ext_resource type="PackedScene" uid="uid://uu3jm41m8x1l" path="res://scenes/obstaculos/obstaculo3tscn.tscn" id="11_bwmcx"]
+[ext_resource type="PackedScene" uid="uid://c0o74qkyi36fo" path="res://scenes/chilli_5.tscn" id="11_g87e8"]
+[ext_resource type="PackedScene" uid="uid://bdmxe5gc587xm" path="res://scenes/obstaculos/obstaculo5.tscn" id="12_47das"]
+[ext_resource type="PackedScene" uid="uid://bbkq71kpqdpjf" path="res://scenes/chilliex_10.tscn" id="12_owneo"]
+[ext_resource type="PackedScene" uid="uid://csp20tps31nco" path="res://scenes/obstaculos/obstaculo4tscn.tscn" id="12_wual3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eihh5"]
 size = Vector2(36, 742)
@@ -18,16 +24,20 @@ size = Vector2(36, 742)
 size = Vector2(1291, 20)
 
 [node name="Main" type="Node2D"]
+position = Vector2(0, -13)
 script = ExtResource("1_xuw78")
 
 [node name="Ogro" parent="." instance=ExtResource("8_3n63b")]
-position = Vector2(400, 630)
+z_index = -1
+position = Vector2(405, 630)
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Suelo" parent="." instance=ExtResource("3_8cn15")]
+z_index = -2
 
 [node name="Suelo2" parent="." instance=ExtResource("3_8cn15")]
+z_index = -2
 position = Vector2(1915, 0)
 
 [node name="Enemy" parent="." instance=ExtResource("7_8x46i")]
@@ -59,17 +69,46 @@ shape = SubResource("RectangleShape2D_8l7tl")
 stream = ExtResource("8_l6f0u")
 
 [node name="GUI" parent="." instance=ExtResource("7_w1owe")]
-
-[node name="Obstaculo" parent="." instance=ExtResource("8_p0254")]
-position = Vector2(1520, 0)
-
-[node name="Obstaculo2" parent="." instance=ExtResource("9_btn6k")]
-position = Vector2(0, -1038)
+z_index = 1
+position = Vector2(0, 33)
 
 [node name="BackgroundSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_nge36")
 autoplay = true
 bus = &"New Bus"
+
+[node name="Obstaculo" parent="." instance=ExtResource("9_6neaj")]
+position = Vector2(75, -2223)
+
+[node name="Obstaculo2" parent="." instance=ExtResource("9_6neaj")]
+position = Vector2(2092, -2095)
+
+[node name="Obstaculo3" parent="." instance=ExtResource("10_d8b1p")]
+position = Vector2(4011, -2082)
+
+[node name="Obstaculo4" parent="." instance=ExtResource("11_bwmcx")]
+position = Vector2(5697, -2078)
+
+[node name="Obstaculo6" parent="." instance=ExtResource("12_47das")]
+position = Vector2(2371, -1214)
+
+[node name="Obstaculo5" parent="." instance=ExtResource("12_wual3")]
+position = Vector2(7348, -2002)
+
+[node name="Chilli3" parent="." instance=ExtResource("10_b5mqa")]
+z_index = -2
+position = Vector2(364, -872)
+
+[node name="Chilli5" parent="." instance=ExtResource("11_g87e8")]
+z_index = -2
+position = Vector2(151, -686)
+
+[node name="Chilliex10" parent="." instance=ExtResource("12_owneo")]
+z_index = -2
+position = Vector2(192, -1300)
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.5
 
 [connection signal="area_entered" from="area_inicio" to="." method="_on_area_inicio_area_entered"]
 [connection signal="finished" from="BackgroundSound" to="." method="_on_background_sound_finished"]

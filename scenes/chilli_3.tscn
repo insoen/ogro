@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://fxuplaphfeaq"]
+
+[ext_resource type="PackedScene" uid="uid://box1glm87fjof" path="res://scenes/chilli.tscn" id="1_0ma65"]
+[ext_resource type="Script" path="res://scenes/chillies.gd" id="1_nnmv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcwm0"]
+size = Vector2(17, 44)
+
+[node name="Chilli3" type="Node2D"]
+script = ExtResource("1_nnmv0")
+
+[node name="Chilli" parent="." instance=ExtResource("1_0ma65")]
+
+[node name="Chilli2" parent="." instance=ExtResource("1_0ma65")]
+position = Vector2(86, 0)
+
+[node name="Chilli3" parent="." instance=ExtResource("1_0ma65")]
+position = Vector2(168, 0)
+
+[node name="AreaFin" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaFin"]
+position = Vector2(193.5, 14)
+shape = SubResource("RectangleShape2D_wcwm0")
+
+[connection signal="area_entered" from="AreaFin" to="." method="_on_area_fin_area_entered"]
